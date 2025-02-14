@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sa.css">
+    <title>Leia sobiv domeen</title>
+    <style>
+body{
+    background-image: url("sammud.png"); 
+}
+    </style>
+    <script>
+        function toggleSelection(button) {
+            button.classList.toggle("selected");
+        }
+        function checkAvailability() {
+            let messageDiv = document.getElementById("availability-message");
+            messageDiv.innerHTML = "regre.ee on saadaval! <strong>Hind:</strong> €8.37 <button class='order-button'>Telli</button>";
+            messageDiv.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="active">1 Leia domeen</div>
+            <div>2 Sisesta kontaktandmed</div>
+            <div>3 Maksa ja hakka kasutama</div>
+        </div>
+        <h2>Leia sobiv domeen</h2>
+        <p>Domeeninimi peab olema 1–63 märki pikk ja sisaldama ainult tähti, numbreid ning sidekriipsu.</p>
+        <input type="text" placeholder="Sisesta domeeninimi">
+        <button onclick="checkAvailability()">Kontrolli saadavust</button>
+        <div id="availability-message" class="availability-message"></div>
+        <div class="domain-list">
+            <div class="domain-item unavailable">minudomeen.ee - Domeen ei ole saadaval!</div>
+            <div class="domain-item">
+                <span>minudomeen.de - 7 € + km</span>
+                <select>
+                    <option>1 aasta</option>
+                    <option>2 aastat</option>
+                    <option>3 aastat</option>
+                    <option>4 aastat</option>
+                    <option>5 aastat</option>
+                </select>
+                <button class="add-button" onclick="toggleSelection(this)">Vali</button>
+            </div>
+            <div class="domain-item">
+                <span>minudomeen.eu - 17 € + km</span>
+                <select>
+                    <option>1 aasta</option>
+                    <option>2 aastat</option>
+                    <option>3 aastat</option>
+                    <option>4 aastat</option>
+                    <option>5 aastat</option>
+                </select>
+                <button class="add-button" onclick="toggleSelection(this)">Vali</button>
+            </div>
+            <div class="domain-item">
+                <span>minudomeen.com - 4 € + km</span>
+                <select>
+                    <option>1 aasta</option>
+                    <option>2 aastat</option>
+                    <option>3 aastat</option>
+                    <option>4 aastat</option>
+                    <option>5 aastat</option>
+                </select>
+                <button class="add-button" onclick="toggleSelection(this)">Vali</button>
+            </div>
+        </div>
+        <button class="next-button">EDASI ANDMEID SISESTAMA ></button>
+    </div>
+</body>
+</html>
