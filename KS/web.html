@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Kasutame ainult ühte meta viewport sildi -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>League of Legends</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Keha taustapilt, mis skaleerub õigesti */
+        body {
+            background-image: url("webFF.png"); 
+            background-size: cover; /* Tagab, et pilt katab kogu ekraani */
+            background-position: center; /* Asetab pildi keskele */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Täidab kogu nähtava ekraani kõrguse */
+            color: white; /* Teksti värv on nähtav taustapildil */
+        }
+        
+        /* Paindlik paigutus, et sisu keskenduks */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em; /* Suurem pealkiri */
+        }
+
+        /* Kui ekraan on väiksem kui 768px, muudame teksti suurust */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sisu, mis on keskendatud ekraanil -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.downloads {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.download-box {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.dark {
+    background: #333;
+    color: white;
+}
+
+.light {
+    background: #f4f4f4;
+    color: black;
+}
+
+.basics {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to bottom, #d9e7ff, #ffebeb);
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.container {
+    width: 100%; 
+    padding: 20px;
+  }
+  /* Tavaline stiil suurtele ekraanidele */
+.container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  /* Väiksemad ekraanid (nt mobiiltelefonid) */
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-between; /* Paigutab sisu üksteisest kaugemale */
+    flex-wrap: wrap; /* Lubab elementidel minna uuele reale, kui ruumi pole */
+  }
+  
+  .item {
+    flex: 1 1 30%; /* Kõik elemendid võtavad vähemalt 30% ruumi */
+    margin: 10px;
+  }
+  
