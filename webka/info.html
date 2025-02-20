@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sa.css">
+    <title>Isikuandmete sisestamine</title>
+    <style>
+             body {
+       background-image: url("sammud.png");
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-attachment: fixed;
+        }
+        .content-container {
+            position: relative;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h2>Isikuandmete sisestamine</h2>
+        <form>
+            <div class="input-group">
+                <label for="name">Ees- ja perekonnanimi</label>
+                <input type="text" id="name" placeholder="Sisesta oma nimi" required>
+            </div>
+            <div class="input-group">
+                <label for="email">E-posti aadress</label>
+                <input type="email" id="email" placeholder="Sisesta oma e-post" required>
+            </div>
+            <div class="input-group">
+                <label for="phone">Telefoninumber</label>
+                <input type="tel" id="phone" placeholder="Sisesta oma telefoninumber" required>
+            </div>
+            <div class="input-group">
+                <label for="address">Aadress</label>
+                <input type="text" id="address" placeholder="Sisesta oma aadress" required>
+            </div>
+            <button type="submit" class="submit-button">Saada andmed</button>
+        </form>
+    </div>
+</body>
+</html>

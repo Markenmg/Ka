@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sa.css">
+    <style>
+        body {
+            background-image: url("sammud.png"); 
+            background-position: top center; 
+            background-repeat: no-repeat; 
+            background-size: contain; 
+            background-attachment: fixed; 
+        }
+    </style>
+    <script>
+        function toggleSelection(button) {
+            button.classList.toggle("selected");
+        }
+        function checkAvailability() {
+            let messageDiv = document.getElementById("availability-message");
+            messageDiv.innerHTML = "regre.ee on saadaval! <strong>Hind:</strong> €17 <button class='order-button'>Telli</button>";
+            messageDiv.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>1 Leia domeen</div>
+            <div>2 Sisesta kontaktandmed</div>
+            <div class="active">3 Maksa ja hakka kasutama</div>
+        </div>
+        <div class="content-container">
+            <h2>Maksmine</h2>
+            <p>Palun vali maksemeetod ja sisesta vajalikud andmed, et lõpetada ost.</p>
+            <div class="payment-methods">
+                <label>
+                    <input type="radio" name="payment" value="card"> Krediit-/deebetkaart
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="bank"> Pangaülekanne
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="paypal"> PayPal
+                </label>
+            </div>
+            <div class="input-group">
+                <label for="card-number">Kaardi number</label>
+                <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+            </div>
+            <div class="input-group">
+                <label for="expiry">Aegumiskuupäev</label>
+                <input type="text" id="expiry" placeholder="MM/YY">
+            </div>
+            <div class="input-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123">
+            </div>
+            <button class="submit-button">Maksa</button>
+        </div>
+    </div>
+</body>
+</html>

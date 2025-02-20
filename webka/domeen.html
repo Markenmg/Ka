@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sa.css">
-    <title>Leia sobiv domeen</title>
     <style>
-body{
+body {
     background-image: url("sammud.png"); 
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    background-attachment: fixed; 
 }
     </style>
     <script>
@@ -16,20 +19,22 @@ body{
         }
         function checkAvailability() {
             let messageDiv = document.getElementById("availability-message");
-            messageDiv.innerHTML = "regre.ee on saadaval! <strong>Hind:</strong> €8.37 <button class='order-button'>Telli</button>";
+            messageDiv.innerHTML = "regre.ee on saadaval! <strong>Hind:</strong> €17 <button class='order-button'>Telli</button>";
             messageDiv.style.display = "block";
         }
     </script>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="active">1 Leia domeen</div>
-            <div>2 Sisesta kontaktandmed</div>
-            <div>3 Maksa ja hakka kasutama</div>
+</div>
+
+
+ </div>
+        <div >
+         <div >
+         <div>.</div> 
+        <div>.</div>
+         <div></div>
         </div>
-        <h2>Leia sobiv domeen</h2>
-        <p>Domeeninimi peab olema 1–63 märki pikk ja sisaldama ainult tähti, numbreid ning sidekriipsu.</p>
         <input type="text" placeholder="Sisesta domeeninimi">
         <button onclick="checkAvailability()">Kontrolli saadavust</button>
         <div id="availability-message" class="availability-message"></div>
