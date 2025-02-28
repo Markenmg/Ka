@@ -6,7 +6,6 @@
     <title>Domeeniotsing</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .select-wrapper:hover select,
         .selected {
             background-color: #3b82f6;
             color: white;
@@ -20,11 +19,17 @@
             <h2 class="text-xl font-semibold">Leia sobiv domeen</h2>
         </div>
         <p class="mt-2 text-gray-600">Sisesta domeeninimi ja kontrolli saadavust.</p>
+        
         <div class="mt-4 flex">
-            <input id="domainInput" type="text" placeholder="Sisesta domeeninimi" class="border p-2 flex-grow rounded-l">
+            <input id="domainInput" type="text" placeholder="Sisesta domeeninimi" 
+                   class="border p-2 flex-grow rounded-l">
             <button onclick="checkDomain()" class="bg-blue-500 text-white px-4 rounded-r">KONTROLLI</button>
         </div>
+        
         <div id="results" class="mt-6"></div>
+        
+        <h3 class="mt-6 text-lg font-semibold">Valitud domeenid</h3>
+        <div id="selectedDomains" class="mt-2 p-4 bg-gray-200 rounded"></div>
     </div>
     
     <script>
@@ -43,25 +48,15 @@
                 { name: domain + '.de', available: true, price: '7 €' },
                 { name: domain + '.eu', available: true, price: '17 €' },
                 { name: domain + '.com', available: true, price: '4 €' },
-                { name: domain + '.ef', available: true, price: '23 €' },
-                { name: domain + '.se', available: true, price: '12 €' }
+                { name: domain + '.net', available: true, price: '12 €' }
             ];
             
             domains.forEach(d => {
                 if (d.available) {
-                    results.innerHTML += `<div class='flex justify-between items-center border p-2 mt-2 rounded' onclick='toggleSelection(this)'>
+                    results.innerHTML += `<div class='flex justify-between items-center border p-2 mt-2 rounded' onclick='selectDomain(this, "${d.name}")'>
                         <span>${d.name}</span>
                         <span>${d.price} + km</span>
-                        <div class='select-wrapper'>
-                            <select class='border p-1 rounded'>
-                                <option value="1">1 aasta</option>
-                                <option value="2">2 aastat</option>
-                                <option value="3">3 aastat</option>
-                                <option value="4">4 aastat</option>
-                                <option value="5">5 aastat</option>
-                            </select>
-                        </div>
-                        <button class='bg-blue-500 text-white px-3 py-1 rounded'>+ Vali</button>
+                        <button class='bg-blue-500 text-white px-3 py-1 rounded'>+ Lisa</button>
                     </div>`;
                 } else {
                     results.innerHTML += `<div class='text-red-500 mt-2'>${d.name} ei ole saadaval!</div>`;
@@ -69,8 +64,10 @@
             });
         }
 
-        function toggleSelection(element) {
-            element.classList.toggle('selected');
+        function selectDomain(element, domainName) {
+            element.classList.add('selected');
+            const selectedContainer = document.getElementById('selectedDomains');
+            selectedContainer.innerHTML += `<div class='bg-white p-2 rounded shadow mt-2'>${domainName}</div>`;
         }
     </script>
 </body>
